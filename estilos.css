@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+input:focus {
+    outline: none;
+  }
+:root{
+    --colorFondo:#013169;
+    --colorFondoFuerte:#072145;
+    --colorLetra:white;
+    --colorBoton:#015A95;
+    --colorBoton:#038587;
+    --tamContenido:80%;
+}
+body{
+    background-color: var(--colorFondo);
+    color: var(--colorLetra);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.tituloPrincipal{
+    position: relative;
+}
+.tituloPrincipal::before{
+    content: "";
+    width: 100%;
+    height: .25rem;
+    background-color:var(--colorFondoFuerte);
+    display: block;
+    position:absolute;
+    top: 100%;
+
+}
+.tablaContainer{
+    width: var(--tamContenido);
+    margin: auto;
+}
+.tabla{
+    border: 1px solid var(--colorFondoFuerte);
+    width: 100%;
+}
+tr, td{
+    padding-left: 20px;
+}
+.tabla__titulos{
+    background-color: var(--colorFondoFuerte);
+}
+.boton{
+    border: none;
+    background-color: var(--colorBoton);
+    height: 2rem;
+    width: 100%;
+    color:var(--colorLetra);
+}
+.tabla__opciones{
+    display: flex;
+    gap:.5rem;
+    flex-wrap: wrap;
+}
+.tabla__opciones>:nth-child(1),.tabla__opciones>:nth-child(2),.tabla__opciones>:nth-child(3){
+    flex-grow: 1;
+    flex-basis: 0;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    min-height: 8rem;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap:10px
+}
+.subtitulo{
+    text-align: center;
+}
+.mostrarColumnas_checks{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.chkcontainer{
+    min-width: 80px;
+}
+
+
+
+
+/* .tablaContainer{
+    display: none;
+} */
+
+/* ABM  */
+.formularioABM{
+    /* width: var(--tamContenido); */
+    max-width: 90%;
+    min-width: 30%;
+    margin: auto;
+    border:3px solid #072145;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0,.6);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+ 
+}
+.idForm{
+    color: white;
+}
+.formularioABMContainer{
+    display: flex;
+    flex-direction: column;
+    
+}
+.formularioABMContainer>input,
+.formularioABMContainer>label,
+.ABM_idContainer>input,
+.ABM_idContainer.label,
+.formularioABMContainer>select,
+.empleadoOpciones>input,
+.empleadoOpciones>label{
+    height: 1.5rem;
+    line-height: 1.5rem;
+}
+
+.ABM_idContainer>input{
+    border: none;
+    background-color: transparent;
+}
+
+.ABM_EmpleadoOpciones{
+    display: flex;
+    gap: 5px;
+}
+.empleadoOpciones{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.formularioABM{
+    display: none;
+}
+.validacionSpan{
+    color:red;
+    font-size: .75rem;
+}

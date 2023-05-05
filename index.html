@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <script src="funcionalidad.js"></script>
+    <title>Laboratorio Primer Parcial</title>
+</head>
+<body>
+    <div id="tablaContainer" class="tablaContainer">
+        <h1 class="tituloPrincipal">PRIMER PARCIAL - LABORATORIO</h1>
+        <div class="tabla__opciones">
+            <div class="filtrarPor">
+                <h2 class="subtitulo">Filtrar por</h2>
+                <select name="" id="selectOption">
+                    <option value="Todo">Todo</option>
+                    <option value="Cliente">Cliente</option>
+                    <option value="Empleado">Empleado</option>
+                </select>
+            </div>
+            <div class="CalcularPromedio">
+                <h2 class="subtitulo">Calcular promedio</h2>
+                <input type="text" id="txtPromedio"  readonly>
+                <button id="btnPromedio" class="boton">Calcular</button>
+            </div>
+            <div class="mostrarColumnas">
+                <h2 class="subtitulo">Mostrar columnas</h2>
+                <div class="mostrarColumnas_checks">
+                    <div class="chkcontainer">
+                        <input type="checkbox" id="chk_id_Persona" checked><label for="chk_id_Persona">Id</label>
+                    </div>
+                    <div class="chkcontainer">
+                        <input type="checkbox" id="chk_nombre" checked><label for="chk_nombre">Nombre</label>
+                    </div>
+                    <div class="chkcontainer">
+                        <input type="checkbox" id="chk_apellido" checked><label for="chk_apellido">Apellido</label>
+                    </div>
+                    <div class="chkcontainer">
+                        <input type="checkbox" id="chk_edad" checked><label for="chk_edad">Edad</label>
+                    </div>
+                    <div class="chkcontainer">
+                        <input type="checkbox" id="chk_sueldo" checked><label for="chk_sueldo">Sueldo</label>
+                    </div>
+                    <div class="chkcontainer">
+                        <input type="checkbox" id="chk_ventas" checked><label for="chk_ventas">Ventas</label>
+                    </div>
+                    <div class="chkcontainer">
+                        <input type="checkbox" id="chk_compras" checked><label for="chk_compras">Compras</label>
+                    </div>
+                    <div class="chkcontainer">
+                        <input type="checkbox" id="chk_telefono" checked><label for="chk_telefono">Telefono</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+        <!-- <div  id="tabla"> -->
+            <table class="tabla">
+                <thead >
+                    <tr id="thTableHead" class="tabla__titulos">
+                        <th data-value="id" class="idCol">Id</th>
+                        <th data-value="nombre" class="nombreCol">Nombre</th>
+                        <th data-value="apellido" class="apellidoCol">Apellido</th>
+                        <th data-value="edad" class="edadCol">Edad</th>
+                        <th data-value="sueldo" class="sueldoCol">Sueldo</th>
+                        <th data-value="ventas" class="ventasCol">Ventas</th>
+                        <th data-value="compras" class="comprasCol">Compras</th>
+                        <th data-value="telefono" class="telefonoCol">Telefono</th>
+                    </tr>
+                </thead>
+                <tbody id="cuerpoTabla">
+
+                </tbody>
+            </table>
+            
+        </div>
+        <button id="btnTablaAgregar" class="boton">Agregar</button>
+    </div>
+    <div id="formularioABM" class="formularioABM">
+        <div class="formularioABMContainer">
+            <h2 class="subtitulo">Formulario ABM</h2>
+            <div class="ABM_idContainer">
+                <label for="idForm">Id: </label>
+                <input type="text" class="idForm" id="idForm">
+            </div>
+            <label for="nombreForm">Nombre</label>
+            <input type="text" id="nombreForm">
+            <span id="spanNombreForm"class="validacionSpan"></span>
+            <label for="apellidoForm">Apellido</label>
+            <input type="text" id="apellidoForm">
+            <span id="spanApellidoForm"class="validacionSpan"></span>
+            <label for="edadForm">Edad</label>
+            <input type="text" id="edadForm">
+            <span id="spanEdadForm"class="validacionSpan"></span>
+            <label for="formSelectOption">Tipo de usuario</label>
+            <select id="formSelectOption">
+                <option value="Cliente">Cliente</option>
+                <option value="Empleado">Empleado</option>
+            </select>
+            <div id="opcionesEmpleado" class="ABM_EmpleadoOpciones">
+                <div class="empleadoOpciones">
+                    <label for="sueldoForm">Sueldo</label>
+                    <input type="text" id="sueldoForm"> 
+                    <span id="spanSueldoForm" class="validacionSpan"></span>
+                </div>
+                <div class="empleadoOpciones">
+                    <label for="ventasForm">Ventas</label>
+                    <input type="text" id="ventasForm"> 
+                    <span id="spanVentasForm"class="validacionSpan"></span>
+                </div>
+            </div>
+            <div id="opcinesCliente" class="ABM_EmpleadoOpciones">
+                <div class="empleadoOpciones">
+                    <label for="comprasForm">Compras</label>
+                    <input type="text" id="comprasForm">
+                    <span id="spanComprasForm" class="validacionSpan"></span>
+                </div>
+                <div class="empleadoOpciones">
+                    <label for="telefonoForm">Telefono</label>
+                    <input type="text" id="telefonoForm"> 
+                    <span id="spanTelefonoForm" class="validacionSpan"></span>
+                </div>
+            </div>
+        </div>
+        <button id="bntABMAgregar" class="boton">Agregar</button>
+        <button id="bntABMCancelar" class="boton">Cancelar</button>
+        
+    </div>    
+</body>
+</html>
