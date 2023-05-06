@@ -16,8 +16,8 @@
                 <h2 class="subtitulo">Filtrar por</h2>
                 <select name="" id="selectOption">
                     <option value="Todo">Todo</option>
-                    <option value="Cliente">Cliente</option>
-                    <option value="Empleado">Empleado</option>
+                    <option value="Heroe">Heroe</option>
+                    <option value="Villano">Villano</option>
                 </select>
             </div>
             <div class="CalcularPromedio">
@@ -41,22 +41,27 @@
                         <input type="checkbox" id="chk_edad" checked><label for="chk_edad">Edad</label>
                     </div>
                     <div class="chkcontainer">
-                        <input type="checkbox" id="chk_sueldo" checked><label for="chk_sueldo">Sueldo</label>
+                        <input type="checkbox" id="chk_alterEgo" checked><label for="chk_alterEgo">AlterEgo</label>
                     </div>
                     <div class="chkcontainer">
-                        <input type="checkbox" id="chk_ventas" checked><label for="chk_ventas">Ventas</label>
+                        <input type="checkbox" id="chk_ciudad" checked><label for="chk_ciudad">Cuidad</label>
                     </div>
                     <div class="chkcontainer">
-                        <input type="checkbox" id="chk_compras" checked><label for="chk_compras">Compras</label>
+                        <input type="checkbox" id="chk_publicado" checked><label for="chk_publicado">Publicado</label>
                     </div>
                     <div class="chkcontainer">
-                        <input type="checkbox" id="chk_telefono" checked><label for="chk_telefono">Telefono</label>
+                        <input type="checkbox" id="chk_enemigo" checked><label for="chk_enemigo">Enemigo</label>
+                    </div>
+                    <div class="chkcontainer">
+                        <input type="checkbox" id="chk_robos" checked><label for="chk_robos">Robos</label>
+                    </div>
+                    <div class="chkcontainer">
+                        <input type="checkbox" id="chk_asesinatos" checked><label for="chk_asisinatos">Asesinatos</label>
                     </div>
                 </div>
             </div>
         </div>
         <div>
-        <!-- <div  id="tabla"> -->
             <table class="tabla">
                 <thead >
                     <tr id="thTableHead" class="tabla__titulos">
@@ -64,20 +69,27 @@
                         <th data-value="nombre" class="nombreCol">Nombre</th>
                         <th data-value="apellido" class="apellidoCol">Apellido</th>
                         <th data-value="edad" class="edadCol">Edad</th>
-                        <th data-value="sueldo" class="sueldoCol">Sueldo</th>
-                        <th data-value="ventas" class="ventasCol">Ventas</th>
-                        <th data-value="compras" class="comprasCol">Compras</th>
-                        <th data-value="telefono" class="telefonoCol">Telefono</th>
+    
+                        <th data-value="alterEgo" class="alterEgoCol">AlterEgo</th>
+                        <th data-value="ciudad" class="ciudadCol">Ciudad</th>
+                        <th data-value="publicado" class="publicadoCol">Publicado</th>
+                        <th data-value="enemigo" class="enemigoCol">Enemigo</th>
+                        <th data-value="robos" class="robosCol">Robos</th>
+                        <th data-value="asesinatos" class="asesinatosCol">Asesinatos</th>
                     </tr>
                 </thead>
                 <tbody id="cuerpoTabla">
-
+    
                 </tbody>
-            </table>
-            
+            </table> 
+            </div>
+                <button id="btnTablaAgregar" class="boton">Agregar</button>
+            </div>    
         </div>
-        <button id="btnTablaAgregar" class="boton">Agregar</button>
     </div>
+
+
+
     <div id="formularioABM" class="formularioABM">
         <div class="formularioABMContainer">
             <h2 class="subtitulo">Formulario ABM</h2>
@@ -96,35 +108,48 @@
             <span id="spanEdadForm"class="validacionSpan"></span>
             <label for="formSelectOption">Tipo de usuario</label>
             <select id="formSelectOption">
-                <option value="Cliente">Cliente</option>
-                <option value="Empleado">Empleado</option>
+                <option value="Heroe">Heroe</option>
+                <option value="Villano">Villano</option>
             </select>
-            <div id="opcionesEmpleado" class="ABM_EmpleadoOpciones">
-                <div class="empleadoOpciones">
-                    <label for="sueldoForm">Sueldo</label>
-                    <input type="text" id="sueldoForm"> 
-                    <span id="spanSueldoForm" class="validacionSpan"></span>
+
+            <div id="opcionesHeroe" class="ABM_HeroeOpciones">
+                <div class="heroeOpciones">
+                    <label for="alteregoForm">AlterEgo</label>
+                    <input type="text" id="alteregoForm"> 
+                    <span id="spanAlteregoForm" class="validacionSpan"></span>
                 </div>
-                <div class="empleadoOpciones">
-                    <label for="ventasForm">Ventas</label>
-                    <input type="text" id="ventasForm"> 
-                    <span id="spanVentasForm"class="validacionSpan"></span>
+                <div class="heroeOpciones">
+                    <label for="ciudadForm">Cuidad</label>
+                    <input type="text" id="ciudadForm"> 
+                    <span id="spanCiudadForm"class="validacionSpan"></span>
+                </div>
+                <div class="heroeOpciones">
+                    <label for="publicadoForm">Publicado</label>
+                    <input type="text" id="publicadoForm"> 
+                    <span id="spanPublicadoForm"class="validacionSpan"></span>
                 </div>
             </div>
-            <div id="opcinesCliente" class="ABM_EmpleadoOpciones">
-                <div class="empleadoOpciones">
-                    <label for="comprasForm">Compras</label>
-                    <input type="text" id="comprasForm">
-                    <span id="spanComprasForm" class="validacionSpan"></span>
+            <div id="opcinesVillano" class="ABM_VillanoOpciones">
+                <div class="villanoOpciones">
+                    <label for="enemigoForm">Enemigo</label>
+                    <input type="text" id="enemigoForm">
+                    <span id="spanEnemigoForm" class="validacionSpan"></span>
                 </div>
-                <div class="empleadoOpciones">
-                    <label for="telefonoForm">Telefono</label>
-                    <input type="text" id="telefonoForm"> 
-                    <span id="spanTelefonoForm" class="validacionSpan"></span>
+                <div class="villanoOpciones">
+                    <label for="robosForm">Robos</label>
+                    <input type="text" id="robosForm"> 
+                    <span id="spanRobosForm" class="validacionSpan"></span>
+                </div>
+                <div class="villanoOpciones">
+                    <label for="asesinatosForm">Asesinatos</label>
+                    <input type="text" id="asesinatosForm"> 
+                    <span id="spanAsesinatosForm" class="validacionSpan"></span>
                 </div>
             </div>
         </div>
         <button id="bntABMAgregar" class="boton">Agregar</button>
+        <button id="bntABMModificar" class="boton">Modificar</button>
+        <button id="bntABMEliminar" class="boton">Eliminar</button>
         <button id="bntABMCancelar" class="boton">Cancelar</button>
         
     </div>    

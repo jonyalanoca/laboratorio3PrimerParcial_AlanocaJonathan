@@ -88,13 +88,8 @@ tr, td{
 }
 
 
+/* ABM */
 
-
-/* .tablaContainer{
-    display: none;
-} */
-
-/* ABM  */
 .formularioABM{
     /* width: var(--tamContenido); */
     max-width: 90%;
@@ -121,8 +116,10 @@ tr, td{
 .ABM_idContainer>input,
 .ABM_idContainer.label,
 .formularioABMContainer>select,
-.empleadoOpciones>input,
-.empleadoOpciones>label{
+.villanoOpciones>input,
+.villanoOpciones>label,
+.heroeOpciones>input,
+.heroeOpciones>label{
     height: 1.5rem;
     line-height: 1.5rem;
 }
@@ -132,11 +129,11 @@ tr, td{
     background-color: transparent;
 }
 
-.ABM_EmpleadoOpciones{
+.ABM_HeroeOpciones,.ABM_VillanoOpciones{
     display: flex;
     gap: 5px;
 }
-.empleadoOpciones{
+.heroeOpciones,.villanoOpciones{
     display: flex;
     flex-direction: column;
 }
